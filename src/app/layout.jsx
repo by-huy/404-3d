@@ -42,7 +42,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`fixed h-full w-full top-0 ${neuemontrealcondensed.variable} ${denton.variable} ${neuemontreal.variable}`}>
-      <body >{children}</body>
+      <body >
+      <svg className="pointer-events-none cursor-none absolute">
+            <filter id="grainy">
+              <feTurbulence type="turbulence" baseFrequency="0.40" />
+              <feColorMatrix type="saturate" values="0" />
+            </filter>
+          </svg>
+        {children}</body>
     </html>
   );
 }
