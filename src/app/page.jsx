@@ -26,7 +26,7 @@ export default function Home() {
         className="absolute top-1/2
        -translate-y-1/2 flex flex-col items-center "
       >
-        <h1 className="text-white text-[50rem] mix-blend-difference slashed-zero font-bold font-neuemontrealcondensed leading-none">
+        <h1 className="text-white text-[32vw] mix-blend-difference slashed-zero font-bold font-neuemontrealcondensed leading-none">
           404
         </h1>
         <p className=" text-gray-200 font-neuemontreal text-4xl max-w-[30ch] text-center ">
