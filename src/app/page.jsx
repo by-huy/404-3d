@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "./components/Button";
-import FloatingShapes from "./components/floatingShapes";
+import FloatingShapes from "./components/FloatingShapes";
 
 export default function Home() {
   return (
