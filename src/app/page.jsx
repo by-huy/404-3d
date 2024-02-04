@@ -4,7 +4,7 @@ import FloatingShapes from "./components/floatingShapes";
 
 export default function Home() {
   return (
-    <main className="flex h-screen flex-col items-center justify-between bg-[#131313]">
+    <main className="flex h-screen flex-col items-center justify-between bg-[#060606]">
       {/* <Canvas
         camera={{
           fov: 45,

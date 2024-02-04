@@ -9,9 +9,9 @@ import { Suspense } from "react";
 export default function Index() {
   return (
     <Canvas orthographic camera={{ position: [0, 0, 200], zoom: 300 }}>
-      <Suspense fallback={null} >
+      <Suspense fallback={null}>
         <Model />
-        <Environment preset="city" />
+        <Environment preset="night" />
       </Suspense>
     </Canvas>
   );

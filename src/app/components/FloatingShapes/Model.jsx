@@ -1,5 +1,5 @@
 import { Float, useGLTF } from "@react-three/drei";
-
+import { Grid } from "@react-three/drei";
 // Mesh component
 function Mesh({ node, material }) {
   const { geometry, castShadow, receiveShadow, position } = node;
@@ -19,7 +19,31 @@ export default function Model() {
   const { nodes, materials } = useGLTF("/medias/404.glb");
   return (
     <>
-      <directionalLight position={[-50, 30, 0]}  />
+           <ambientLight intensity={0.1} /> {/* Ambient light */}
+      
+      {/* Key Light (Directional Light) */}
+      <directionalLight
+        position={[-40, 50, 0]}
+        color="purple"
+        castShadow
+        intensity={2}
+      />
+      
+      {/* Fill Light */}
+      <directionalLight
+        position={[40, -50, 0]}
+        color="orange"
+        castShadow
+        intensity={0.2}
+      />
+
+      {/* Backlight or Rim Light */}
+      <directionalLight
+        position={[0, 10, -20]}
+        color="orange"
+        castShadow
+        intensity={8}
+      />
       <Float>
         <group>
           <Mesh node={nodes.Torus} material={materials.Metal} />
