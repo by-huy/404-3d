@@ -1,7 +1,38 @@
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const neuemontreal = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PPNeueMontreal-Medium.woff2",
+    },
+  ],
+  display: "block",
+  variable: "--font-neuemontreal",
+});
+
+const neuemontrealcondensed = localFont({
+  src: [
+    {
+      path: "../../public/fonts/OTNeueMontreal-MediumSqueezed.woff",
+    },
+  ],
+  display: "block",
+  variable: "--font-neuemontrealcondensed",
+});
+
+const denton = localFont({
+  src: [
+    {
+      path: "../../public/fonts/DentonVariableTest-VF.otf",
+    },
+  ],
+  display: "block",
+  variable: "--font-denton",
+});
+
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +41,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="fixed h-full w-full top-0">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`fixed h-full w-full top-0 ${neuemontrealcondensed.variable} ${denton.variable} ${neuemontreal.variable}`}>
+      <body >{children}</body>
     </html>
   );
 }
