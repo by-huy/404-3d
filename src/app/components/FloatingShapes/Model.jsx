@@ -26,7 +26,7 @@ export default function Model({ mouse }) {
   const { nodes, materials } = useGLTF("/medias/404.glb");
   return (
     <>
-      <ambientLight intensity={0.1} /> {/* Ambient light */}
+      <ambientLight intensity={0.1} />
       {/* Key Light (Directional Light) */}
       <directionalLight
         position={[-40, 50, 0]}

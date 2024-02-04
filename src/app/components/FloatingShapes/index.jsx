@@ -14,7 +14,7 @@ export default function Index() {
   const spring = {
     type: "spring",
     stiffness: 75,
-    damping: 125,
+    damping: 120,
     mass: 1,
   };
   const smoothMouse = {
@@ -40,11 +40,9 @@ export default function Index() {
   });
 
   return (
-    <Canvas orthographic camera={{ position: [0, 0, 200], zoom: 500 }}>
-      <Suspense fallback={null}>
+    <Canvas orthographic camera={{ position: [0, 0, 200], zoom: 475 }}>
         <Model mouse={smoothMouse} />
         <Environment preset="night" />
-      </Suspense>
     </Canvas>
   );
 }
