@@ -22,8 +22,8 @@ function Mesh({ node, material, mouse, multiplier }) {
   );
 }
 
-export default function Model({ mouse, url }) {
-  const { nodes, materials } = useGLTF(url);
+export default function Model({ mouse }) {
+  const { nodes, materials } = useGLTF("/medias/404.glb");
   return (
     <>
       <ambientLight intensity={0.1} />
@@ -64,4 +64,4 @@ export default function Model({ mouse, url }) {
   );
 }
 
-useGLTF.preload(["/medias/404.glb"]);
+useGLTF.preload("/medias/404.glb");

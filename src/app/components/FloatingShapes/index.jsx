@@ -39,10 +39,8 @@ export default function Index() {
 
   return (
     <Canvas orthographic camera={{ position: [0, 0, 200], zoom: 475 }}>
-      <Suspense fallback={<Model url="/medias/404lowpoly.glb" />}>
-        <Model mouse={smoothMouse} url="/medias/404.glb" />
+        <Model mouse={smoothMouse} />
         <Environment preset="night" />
-      </Suspense>
     </Canvas>
   );
 }
