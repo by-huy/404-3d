@@ -1,5 +1,5 @@
 "use client";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useMotionValue, useSpring } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 import { Environment } from "@react-three/drei";
@@ -30,8 +30,6 @@ export default function Index() {
     mouse.x.set(clientX / innerWidth);
   };
 
-  
-
   useEffect(() => {
     window.addEventListener("mousemove", trackMouse);
     return () => {
@@ -41,8 +39,10 @@ export default function Index() {
 
   return (
     <Canvas orthographic camera={{ position: [0, 0, 200], zoom: 475 }}>
-        <Model mouse={smoothMouse} />
+      <Suspense fallback={<Model url="/medias/404lowpoly.glb" />}>
+        <Model mouse={smoothMouse} url="/medias/404.glb" />
         <Environment preset="night" />
+      </Suspense>
     </Canvas>
   );
 }
