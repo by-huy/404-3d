@@ -48,6 +48,7 @@ export default function Model({ mouse }) {
         castShadow
         intensity={8}
       />
+      
       <Float>
         <group>
           <Mesh mouse={mouse} node={nodes.Torus} material={materials.Metal} multiplier={0.8} />
