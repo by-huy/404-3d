@@ -54,7 +54,7 @@ export default function Model({ mouse }) {
           <Mesh mouse={mouse} node={nodes.Torus} material={materials["Metal.002"]} multiplier={0.8} />
           <Mesh mouse={mouse} node={nodes.Cylinder} material={materials["Material.014"]} multiplier={1.2}/>
           <Mesh mouse={mouse} node={nodes.Cylinder001} material={materials["Material.015"]} multiplier={0.3}/>
-          <Mesh mouse={mouse} node={nodes.Cone} material={materials["Ground (Dried Mud, Debris)"]} multiplier={1.1}/>
+          <Mesh mouse={mouse} node={nodes.Cone} material={materials["Material.018"]} multiplier={1.1}/>
           <Mesh mouse={mouse} node={nodes.Icosphere001} material={materials["Material.016"]} multiplier={0.5}/>
           <Mesh mouse={mouse} node={nodes.Icosphere} material={materials["Material.017"]} multiplier={0.4}/>
           <Mesh mouse={mouse} node={nodes.Cube} material={materials["Metal.002"]} multiplier={1.6}/>
